@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://skilledroofer.com/sitemap.xml

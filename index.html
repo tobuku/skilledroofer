@@ -1,1 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkilledRoofer — The Roofer's Guide to Every Material</title>
+  <meta name="description" content="Expert roofing material reviews, comparisons, and buying guides. From asphalt shingles to metal roofing, find the best products for every project.">
+  <meta property="og:title" content="SkilledRoofer — The Roofer's Guide to Every Material">
+  <meta property="og:description" content="Expert roofing material reviews, comparisons, and buying guides for pros and homeowners.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://skilledroofer.com/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="favicon.svg" alt="SR" width="32" height="32">
+      <span class="nav-logo-text">Skilled<span>Roofer</span></span>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="shingles.html">Shingles</a></li>
+      <li><a href="metal-roofing.html">Metal Roofing</a></li>
+      <li><a href="commercial.html">Commercial</a></li>
+      <li><a href="tools.html">Tools</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-gradient"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Roofing Materials Directory</div>
+    <h1>The Roofer's Guide to <span class="highlight">Every Material</span></h1>
+    <p>Expert reviews, head-to-head comparisons, and buying guides for roofing professionals and homeowners. Find the right material for every project.</p>
+    <div class="hero-ctas">
+      <a href="shingles.html" class="btn btn-primary">Best Shingles 2026 →</a>
+      <a href="metal-vs-shingles.html" class="btn btn-secondary">Metal vs Shingles</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="number">6+</span>
+        <span class="label">Material Guides</span>
+      </div>
+      <div class="hero-stat">
+        <span class="number">30+</span>
+        <span class="label">Products Reviewed</span>
+      </div>
+      <div class="hero-stat">
+        <span class="number">20+</span>
+        <span class="label">Years Experience</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Category Cards -->
+<div class="section">
+  <div class="section-header animate-in">
+    <span class="section-tag">Browse by Category</span>
+    <h2 class="section-title">Roofing Material Guides</h2>
+    <p class="section-subtitle">In-depth reviews, price breakdowns, and pro tips for every major roofing material on the market.</p>
+  </div>
+
+  <div class="categories">
+    <a href="shingles.html" class="cat-card animate-in">
+      <div class="cat-card-bg">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#2a4d7a,#1e3a5f);"></div>
+      </div>
+      <div class="cat-card-overlay"></div>
+      <span class="cat-card-arrow">→</span>
+      <div class="cat-card-content">
+        <h3>Asphalt Shingles</h3>
+        <p>Top brands reviewed — GAF, Owens Corning, CertainTeed & more</p>
+      </div>
+    </a>
+
+    <a href="metal-roofing.html" class="cat-card animate-in">
+      <div class="cat-card-bg">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#3a5a7c,#1e3a5f);"></div>
+      </div>
+      <div class="cat-card-overlay"></div>
+      <span class="cat-card-arrow">→</span>
+      <div class="cat-card-content">
+        <h3>Metal Roofing</h3>
+        <p>Standing seam, corrugated, metal shingles & stone-coated steel</p>
+      </div>
+    </a>
+
+    <a href="metal-vs-shingles.html" class="cat-card animate-in">
+      <div class="cat-card-bg">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#4a6a8c,#2a4d7a);"></div>
+      </div>
+      <div class="cat-card-overlay"></div>
+      <span class="cat-card-arrow">→</span>
+      <div class="cat-card-content">
+        <h3>Metal vs Shingles</h3>
+        <p>Complete comparison — cost, lifespan, climate, and ROI</p>
+      </div>
+    </a>
+
+    <a href="commercial.html" class="cat-card animate-in">
+      <div class="cat-card-bg">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#2a4d7a,#152d4a);"></div>
+      </div>
+      <div class="cat-card-overlay"></div>
+      <span class="cat-card-arrow">→</span>
+      <div class="cat-card-content">
+        <h3>Commercial Roofing</h3>
+        <p>TPO, EPDM, PVC, modified bitumen & built-up roofing</p>
+      </div>
+    </a>
+
+    <a href="underlayment.html" class="cat-card animate-in">
+      <div class="cat-card-bg">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#3a5a7c,#152d4a);"></div>
+      </div>
+      <div class="cat-card-overlay"></div>
+      <span class="cat-card-arrow">→</span>
+      <div class="cat-card-content">
+        <h3>Underlayment</h3>
+        <p>Synthetic, felt paper & self-adhering membrane guides</p>
+      </div>
+    </a>
+
+    <a href="tools.html" class="cat-card animate-in">
+      <div class="cat-card-bg">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#4a6a8c,#1e3a5f);"></div>
+      </div>
+      <div class="cat-card-overlay"></div>
+      <span class="cat-card-arrow">→</span>
+      <div class="cat-card-content">
+        <h3>Roofing Tools</h3>
+        <p>Nail guns, tear-off tools, safety gear & must-have equipment</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- Trust Section -->
+<section class="trust">
+  <div class="trust-inner">
+    <span class="section-tag animate-in">Why Trust Us</span>
+    <h2 class="section-title animate-in">Built by a Working Roofer</h2>
+    <p class="section-subtitle animate-in">Every recommendation comes from hands-on experience installing, repairing, and inspecting roofs across the country.</p>
+    <div class="trust-badges animate-in">
+      <div class="trust-badge">
+        <div class="trust-badge-icon">🏗️</div>
+        <span>Hands-On Testing</span>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-icon">📋</div>
+        <span>Honest Reviews</span>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-icon">💰</div>
+        <span>Real Price Data</span>
+      </div>
+      <div class="trust-badge">
+        <div class="trust-badge-icon">🔧</div>
+        <span>Pro Recommendations</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Skilled<span>Roofer</span></h3>
+      <p>Expert roofing material reviews and buying guides for professionals and homeowners.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Guides</h4>
+      <ul>
+        <li><a href="shingles.html">Best Shingles</a></li>
+        <li><a href="metal-roofing.html">Metal Roofing</a></li>
+        <li><a href="metal-vs-shingles.html">Metal vs Shingles</a></li>
+        <li><a href="commercial.html">Commercial</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>More</h4>
+      <ul>
+        <li><a href="underlayment.html">Underlayment</a></li>
+        <li><a href="tools.html">Roofing Tools</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 SkilledRoofer.com — All rights reserved.</span>
+    <span>As an Amazon Associate, we earn from qualifying purchases.</span>
+  </div>
+</footer>
+
+<!-- GSAP ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+  document.querySelectorAll('.animate-in').forEach((el, i) => {
+    gsap.fromTo(el,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+        delay: i * 0.1
+      }
+    );
+  });
+</script>
+
+</body>
+</html>
