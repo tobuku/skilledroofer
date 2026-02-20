@@ -9,6 +9,7 @@
   <meta property="og:description" content="Find 2 trusted roofing contractors in Washington.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://skilledroofer.com/directory/washington.html">
+  <link rel="canonical" href="https://skilledroofer.com/directory/washington.html">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -132,6 +133,73 @@ function filterContractors() {
   document.getElementById('contractorCount').innerHTML =
     'Showing <strong>' + shown + '</strong> contractor' + (shown !== 1 ? 's' : '') + ' in Washington';
   document.getElementById('noResults').style.display = shown === 0 ? '' : 'none';
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Roofing Contractors in Washington",
+  "numberOfItems": 2,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "RoofingContractor",
+        "name": "Washington Roofing Services",
+        "@context": "https://schema.org",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "412 172nd St NE",
+          "addressLocality": "Arlington",
+          "addressRegion": "WA",
+          "postalCode": "98223",
+          "addressCountry": "US"
+        },
+        "telephone": "+12069445409",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "reviewCount": "207"
+        },
+        "areaServed": {
+          "@type": "State",
+          "name": "Washington"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "RoofingContractor",
+        "name": "Diamond Roofing & Construction",
+        "@context": "https://schema.org",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6421 Lake Washington Blvd NE #409",
+          "addressLocality": "Kirkland",
+          "addressRegion": "WA",
+          "postalCode": "98033",
+          "addressCountry": "US"
+        },
+        "telephone": "+12069736575",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "bestRating": "5",
+          "reviewCount": "360"
+        },
+        "areaServed": {
+          "@type": "State",
+          "name": "Washington"
+        }
+      }
+    }
+  ]
 }
 </script>
 

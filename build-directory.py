@@ -60,6 +60,83 @@ def e(text):
     return html_mod.escape(str(text)) if text else ''
 
 
+def json_escape(text):
+    """Escape text for safe embedding in JSON strings."""
+    if not text:
+        return ''
+    return text.replace('\\', '\\\\').replace('"', '\\"').replace('\n', '\\n')
+
+
+def build_schema_local_business(items, state_name):
+    """Build JSON-LD LocalBusiness schema for a list of contractors."""
+    businesses = []
+    for c in items:
+        biz = {
+            "@type": "RoofingContractor",
+            "name": c['name'],
+            "@context": "https://schema.org",
+        }
+        # Address
+        addr = {"@type": "PostalAddress"}
+        if c['address']:
+            addr["streetAddress"] = c['address']
+        if c['city']:
+            addr["addressLocality"] = c['city']
+        if c['state']:
+            addr["addressRegion"] = c['state']
+        if c['zip']:
+            addr["postalCode"] = c['zip']
+        addr["addressCountry"] = "US"
+        biz["address"] = addr
+
+        if c['phone']:
+            digits = ''.join(ch for ch in c['phone'] if ch.isdigit())
+            if digits.startswith('1') and len(digits) > 10:
+                digits = digits[1:]
+            biz["telephone"] = f"+1{digits}"
+
+        if c['website']:
+            url = c['website'] if c['website'].startswith('http') else 'https://' + c['website']
+            biz["url"] = url
+
+        if c['rating']:
+            try:
+                rating_val = float(c['rating'])
+                agg = {
+                    "@type": "AggregateRating",
+                    "ratingValue": str(rating_val),
+                    "bestRating": "5",
+                }
+                if c['reviews']:
+                    agg["reviewCount"] = c['reviews']
+                biz["aggregateRating"] = agg
+            except ValueError:
+                pass
+
+        biz["areaServed"] = {
+            "@type": "State",
+            "name": state_name
+        }
+        businesses.append(biz)
+
+    # Wrap in an ItemList
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": f"Roofing Contractors in {state_name}",
+        "numberOfItems": len(businesses),
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": i + 1,
+                "item": biz
+            }
+            for i, biz in enumerate(businesses)
+        ]
+    }
+    return json.dumps(schema, indent=2)
+
+
 def read_csv():
     contractors = defaultdict(list)
     total = 0
@@ -185,6 +262,7 @@ def build_hub(contractors, total):
   <meta property="og:description" content="Browse {total:,} verified roofing contractors across all 50 states.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://skilledroofer.com/directory.html">
+  <link rel="canonical" href="https://skilledroofer.com/directory.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -297,6 +375,9 @@ def build_state_page(state_name, items):
 
     count = len(items)
 
+    # Build schema markup
+    schema_json = build_schema_local_business(items, state_name)
+
     page = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -308,6 +389,7 @@ def build_state_page(state_name, items):
   <meta property="og:description" content="Find {count} trusted roofing contractors in {e(state_name)}.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://skilledroofer.com/directory/{slug(state_name)}.html">
+  <link rel="canonical" href="https://skilledroofer.com/directory/{slug(state_name)}.html">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -362,6 +444,10 @@ function filterContractors() {{
     'Showing <strong>' + shown + '</strong> contractor' + (shown !== 1 ? 's' : '') + ' in {e(state_name)}';
   document.getElementById('noResults').style.display = shown === 0 ? '' : 'none';
 }}
+</script>
+
+<script type="application/ld+json">
+{schema_json}
 </script>
 
 </body>
