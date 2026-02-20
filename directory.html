@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Roofing Contractors Near You | SkilledRoofer.com</title>
+  <meta name="description" content="Browse 1,274 verified roofing contractors across all 50 states. Find trusted roofers near you with ratings, reviews, and contact info.">
+  <meta property="og:title" content="Find Roofing Contractors Near You | SkilledRoofer.com">
+  <meta property="og:description" content="Browse 1,274 verified roofing contractors across all 50 states.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://skilledroofer.com/directory.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="favicon.svg" alt="SR" width="32" height="32">
+      <span class="nav-logo-text">Skilled<span>Roofer</span></span>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="shingles.html">Shingles</a></li>
+      <li><a href="metal-roofing.html">Metal Roofing</a></li>
+      <li><a href="commercial.html">Commercial</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="directory.html" class="active">Directory</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<div class="page-header">
+  <div class="page-header-content">
+    <div class="hero-badge">Contractor Directory</div>
+    <h1>Find Roofing Contractors <span class="highlight">Near You</span></h1>
+    <p>Browse 1,274 verified roofing contractors across all 50 states. Find trusted roofers with ratings, reviews, and contact information.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="directory-search">
+    <input type="text" id="stateSearch" placeholder="Search by state name..." oninput="filterStates()">
+  </div>
+  <div class="directory-count" id="stateCount">Showing all <strong>50</strong> states &mdash; <strong>1,274</strong> contractors total</div>
+
+  <div class="state-grid" id="stateGrid">
+    <a href="directory/alabama.html" class="state-card animate-in"><span class="state-card-name">Alabama</span><span class="state-card-count">27 contractors</span></a>
+    <a href="directory/alaska.html" class="state-card animate-in"><span class="state-card-name">Alaska</span><span class="state-card-count">19 contractors</span></a>
+    <a href="directory/arizona.html" class="state-card animate-in"><span class="state-card-name">Arizona</span><span class="state-card-count">26 contractors</span></a>
+    <a href="directory/arkansas.html" class="state-card animate-in"><span class="state-card-name">Arkansas</span><span class="state-card-count">29 contractors</span></a>
+    <a href="directory/california.html" class="state-card animate-in"><span class="state-card-name">California</span><span class="state-card-count">61 contractors</span></a>
+    <a href="directory/colorado.html" class="state-card animate-in"><span class="state-card-name">Colorado</span><span class="state-card-count">36 contractors</span></a>
+    <a href="directory/connecticut.html" class="state-card animate-in"><span class="state-card-name">Connecticut</span><span class="state-card-count">30 contractors</span></a>
+    <a href="directory/delaware.html" class="state-card animate-in"><span class="state-card-name">Delaware</span><span class="state-card-count">25 contractors</span></a>
+    <a href="directory/florida.html" class="state-card animate-in"><span class="state-card-name">Florida</span><span class="state-card-count">32 contractors</span></a>
+    <a href="directory/georgia.html" class="state-card animate-in"><span class="state-card-name">Georgia</span><span class="state-card-count">29 contractors</span></a>
+    <a href="directory/hawaii.html" class="state-card animate-in"><span class="state-card-name">Hawaii</span><span class="state-card-count">21 contractors</span></a>
+    <a href="directory/idaho.html" class="state-card animate-in"><span class="state-card-name">Idaho</span><span class="state-card-count">23 contractors</span></a>
+    <a href="directory/illinois.html" class="state-card animate-in"><span class="state-card-name">Illinois</span><span class="state-card-count">28 contractors</span></a>
+    <a href="directory/indiana.html" class="state-card animate-in"><span class="state-card-name">Indiana</span><span class="state-card-count">25 contractors</span></a>
+    <a href="directory/iowa.html" class="state-card animate-in"><span class="state-card-name">Iowa</span><span class="state-card-count">21 contractors</span></a>
+    <a href="directory/kansas.html" class="state-card animate-in"><span class="state-card-name">Kansas</span><span class="state-card-count">28 contractors</span></a>
+    <a href="directory/kentucky.html" class="state-card animate-in"><span class="state-card-name">Kentucky</span><span class="state-card-count">44 contractors</span></a>
+    <a href="directory/louisiana.html" class="state-card animate-in"><span class="state-card-name">Louisiana</span><span class="state-card-count">28 contractors</span></a>
+    <a href="directory/maine.html" class="state-card animate-in"><span class="state-card-name">Maine</span><span class="state-card-count">22 contractors</span></a>
+    <a href="directory/maryland.html" class="state-card animate-in"><span class="state-card-name">Maryland</span><span class="state-card-count">22 contractors</span></a>
+    <a href="directory/massachusetts.html" class="state-card animate-in"><span class="state-card-name">Massachusetts</span><span class="state-card-count">30 contractors</span></a>
+    <a href="directory/michigan.html" class="state-card animate-in"><span class="state-card-name">Michigan</span><span class="state-card-count">31 contractors</span></a>
+    <a href="directory/minnesota.html" class="state-card animate-in"><span class="state-card-name">Minnesota</span><span class="state-card-count">27 contractors</span></a>
+    <a href="directory/mississippi.html" class="state-card animate-in"><span class="state-card-name">Mississippi</span><span class="state-card-count">23 contractors</span></a>
+    <a href="directory/missouri.html" class="state-card animate-in"><span class="state-card-name">Missouri</span><span class="state-card-count">32 contractors</span></a>
+    <a href="directory/montana.html" class="state-card animate-in"><span class="state-card-name">Montana</span><span class="state-card-count">24 contractors</span></a>
+    <a href="directory/nebraska.html" class="state-card animate-in"><span class="state-card-name">Nebraska</span><span class="state-card-count">29 contractors</span></a>
+    <a href="directory/nevada.html" class="state-card animate-in"><span class="state-card-name">Nevada</span><span class="state-card-count">21 contractors</span></a>
+    <a href="directory/new-hampshire.html" class="state-card animate-in"><span class="state-card-name">New Hampshire</span><span class="state-card-count">28 contractors</span></a>
+    <a href="directory/new-jersey.html" class="state-card animate-in"><span class="state-card-name">New Jersey</span><span class="state-card-count">26 contractors</span></a>
+    <a href="directory/new-mexico.html" class="state-card animate-in"><span class="state-card-name">New Mexico</span><span class="state-card-count">22 contractors</span></a>
+    <a href="directory/new-york.html" class="state-card animate-in"><span class="state-card-name">New York</span><span class="state-card-count">23 contractors</span></a>
+    <a href="directory/north-carolina.html" class="state-card animate-in"><span class="state-card-name">North Carolina</span><span class="state-card-count">27 contractors</span></a>
+    <a href="directory/north-dakota.html" class="state-card animate-in"><span class="state-card-name">North Dakota</span><span class="state-card-count">23 contractors</span></a>
+    <a href="directory/ohio.html" class="state-card animate-in"><span class="state-card-name">Ohio</span><span class="state-card-count">24 contractors</span></a>
+    <a href="directory/oklahoma.html" class="state-card animate-in"><span class="state-card-name">Oklahoma</span><span class="state-card-count">18 contractors</span></a>
+    <a href="directory/oregon.html" class="state-card animate-in"><span class="state-card-name">Oregon</span><span class="state-card-count">25 contractors</span></a>
+    <a href="directory/pennsylvania.html" class="state-card animate-in"><span class="state-card-name">Pennsylvania</span><span class="state-card-count">27 contractors</span></a>
+    <a href="directory/rhode-island.html" class="state-card animate-in"><span class="state-card-name">Rhode Island</span><span class="state-card-count">22 contractors</span></a>
+    <a href="directory/south-carolina.html" class="state-card animate-in"><span class="state-card-name">South Carolina</span><span class="state-card-count">29 contractors</span></a>
+    <a href="directory/south-dakota.html" class="state-card animate-in"><span class="state-card-name">South Dakota</span><span class="state-card-count">20 contractors</span></a>
+    <a href="directory/tennessee.html" class="state-card animate-in"><span class="state-card-name">Tennessee</span><span class="state-card-count">20 contractors</span></a>
+    <a href="directory/texas.html" class="state-card animate-in"><span class="state-card-name">Texas</span><span class="state-card-count">21 contractors</span></a>
+    <a href="directory/utah.html" class="state-card animate-in"><span class="state-card-name">Utah</span><span class="state-card-count">24 contractors</span></a>
+    <a href="directory/vermont.html" class="state-card animate-in"><span class="state-card-name">Vermont</span><span class="state-card-count">21 contractors</span></a>
+    <a href="directory/virginia.html" class="state-card animate-in"><span class="state-card-name">Virginia</span><span class="state-card-count">29 contractors</span></a>
+    <a href="directory/washington.html" class="state-card animate-in"><span class="state-card-name">Washington</span><span class="state-card-count">2 contractors</span></a>
+    <a href="directory/west-virginia.html" class="state-card animate-in"><span class="state-card-name">West Virginia</span><span class="state-card-count">17 contractors</span></a>
+    <a href="directory/wisconsin.html" class="state-card animate-in"><span class="state-card-name">Wisconsin</span><span class="state-card-count">19 contractors</span></a>
+    <a href="directory/wyoming.html" class="state-card animate-in"><span class="state-card-name">Wyoming</span><span class="state-card-count">14 contractors</span></a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Skilled<span>Roofer</span></h3>
+      <p>Expert roofing material reviews and buying guides for professionals and homeowners.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Guides</h4>
+      <ul>
+        <li><a href="shingles.html">Best Shingles</a></li>
+        <li><a href="metal-roofing.html">Metal Roofing</a></li>
+        <li><a href="metal-vs-shingles.html">Metal vs Shingles</a></li>
+        <li><a href="commercial.html">Commercial</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>More</h4>
+      <ul>
+        <li><a href="underlayment.html">Underlayment</a></li>
+        <li><a href="tools.html">Roofing Tools</a></li>
+        <li><a href="directory.html">Contractor Directory</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 SkilledRoofer.com — All rights reserved.</span>
+    <span>As an Amazon Associate, we earn from qualifying purchases.</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+  document.querySelectorAll('.animate-in').forEach((el, i) => {
+    gsap.fromTo(el,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+        delay: i * 0.05
+      }
+    );
+  });
+</script>
+<script>
+const stateData = [{"state": "Alabama", "slug": "alabama", "count": 27}, {"state": "Alaska", "slug": "alaska", "count": 19}, {"state": "Arizona", "slug": "arizona", "count": 26}, {"state": "Arkansas", "slug": "arkansas", "count": 29}, {"state": "California", "slug": "california", "count": 61}, {"state": "Colorado", "slug": "colorado", "count": 36}, {"state": "Connecticut", "slug": "connecticut", "count": 30}, {"state": "Delaware", "slug": "delaware", "count": 25}, {"state": "Florida", "slug": "florida", "count": 32}, {"state": "Georgia", "slug": "georgia", "count": 29}, {"state": "Hawaii", "slug": "hawaii", "count": 21}, {"state": "Idaho", "slug": "idaho", "count": 23}, {"state": "Illinois", "slug": "illinois", "count": 28}, {"state": "Indiana", "slug": "indiana", "count": 25}, {"state": "Iowa", "slug": "iowa", "count": 21}, {"state": "Kansas", "slug": "kansas", "count": 28}, {"state": "Kentucky", "slug": "kentucky", "count": 44}, {"state": "Louisiana", "slug": "louisiana", "count": 28}, {"state": "Maine", "slug": "maine", "count": 22}, {"state": "Maryland", "slug": "maryland", "count": 22}, {"state": "Massachusetts", "slug": "massachusetts", "count": 30}, {"state": "Michigan", "slug": "michigan", "count": 31}, {"state": "Minnesota", "slug": "minnesota", "count": 27}, {"state": "Mississippi", "slug": "mississippi", "count": 23}, {"state": "Missouri", "slug": "missouri", "count": 32}, {"state": "Montana", "slug": "montana", "count": 24}, {"state": "Nebraska", "slug": "nebraska", "count": 29}, {"state": "Nevada", "slug": "nevada", "count": 21}, {"state": "New Hampshire", "slug": "new-hampshire", "count": 28}, {"state": "New Jersey", "slug": "new-jersey", "count": 26}, {"state": "New Mexico", "slug": "new-mexico", "count": 22}, {"state": "New York", "slug": "new-york", "count": 23}, {"state": "North Carolina", "slug": "north-carolina", "count": 27}, {"state": "North Dakota", "slug": "north-dakota", "count": 23}, {"state": "Ohio", "slug": "ohio", "count": 24}, {"state": "Oklahoma", "slug": "oklahoma", "count": 18}, {"state": "Oregon", "slug": "oregon", "count": 25}, {"state": "Pennsylvania", "slug": "pennsylvania", "count": 27}, {"state": "Rhode Island", "slug": "rhode-island", "count": 22}, {"state": "South Carolina", "slug": "south-carolina", "count": 29}, {"state": "South Dakota", "slug": "south-dakota", "count": 20}, {"state": "Tennessee", "slug": "tennessee", "count": 20}, {"state": "Texas", "slug": "texas", "count": 21}, {"state": "Utah", "slug": "utah", "count": 24}, {"state": "Vermont", "slug": "vermont", "count": 21}, {"state": "Virginia", "slug": "virginia", "count": 29}, {"state": "Washington", "slug": "washington", "count": 2}, {"state": "West Virginia", "slug": "west-virginia", "count": 17}, {"state": "Wisconsin", "slug": "wisconsin", "count": 19}, {"state": "Wyoming", "slug": "wyoming", "count": 14}];
+function filterStates() {
+  const q = document.getElementById('stateSearch').value.toLowerCase().trim();
+  const grid = document.getElementById('stateGrid');
+  const cards = grid.querySelectorAll('.state-card');
+  let shown = 0, contractors = 0;
+  stateData.forEach((s, i) => {
+    const match = !q || s.state.toLowerCase().includes(q);
+    cards[i].style.display = match ? '' : 'none';
+    if (match) { shown++; contractors += s.count; }
+  });
+  document.getElementById('stateCount').innerHTML =
+    'Showing <strong>' + shown + '</strong> state' + (shown !== 1 ? 's' : '') +
+    ' &mdash; <strong>' + contractors.toLocaleString() + '</strong> contractors total';
+}
+</script>
+
+</body>
+</html>

@@ -1026,6 +1026,221 @@ img { max-width: 100%; height: auto; display: block; }
 .mb-2 { margin-bottom: 1rem; }
 .mb-3 { margin-bottom: 1.5rem; }
 
+/* === Directory — Search & Filters === */
+.directory-search {
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.directory-search input[type="text"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.85rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: var(--card-bg);
+  color: var(--text);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.directory-search input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.directory-search select {
+  padding: 0.85rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: var(--card-bg);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color var(--transition);
+}
+
+.directory-search select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.directory-count {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.directory-count strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* === Directory — State Grid === */
+.state-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.state-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all var(--transition);
+}
+
+.state-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: var(--orange-border);
+  color: var(--text);
+}
+
+.state-card-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.state-card-count {
+  background: var(--orange-light);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.25rem 0.7rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+/* === Directory — Contractor Cards === */
+.contractor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.contractor-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.contractor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.contractor-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.contractor-stars {
+  color: var(--accent);
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.contractor-rating-num {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.contractor-reviews {
+  color: var(--text-light);
+  font-size: 0.8rem;
+}
+
+.contractor-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  line-height: 1.3;
+}
+
+.contractor-address {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.contractor-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  transition: color var(--transition);
+}
+
+.contractor-phone:hover {
+  color: var(--accent);
+}
+
+.contractor-website {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  transition: color var(--transition);
+}
+
+.contractor-website:hover {
+  color: var(--accent-hover);
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-light);
+  font-size: 1.05rem;
+  grid-column: 1 / -1;
+}
+
+/* === Directory Responsive === */
+@media (max-width: 768px) {
+  .state-grid { grid-template-columns: 1fr 1fr; }
+  .contractor-grid { grid-template-columns: 1fr; }
+  .directory-search { flex-direction: column; }
+  .directory-search input[type="text"],
+  .directory-search select { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .state-grid { grid-template-columns: 1fr; }
+}
+
 /* === Scrollbar === */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg); }

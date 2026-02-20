@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roofing Contractors in Washington | SkilledRoofer.com</title>
+  <meta name="description" content="Find 2 trusted roofing contractors in Washington. Browse ratings, reviews, phone numbers, and websites for local roofers.">
+  <meta property="og:title" content="Roofing Contractors in Washington | SkilledRoofer.com">
+  <meta property="og:description" content="Find 2 trusted roofing contractors in Washington.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://skilledroofer.com/directory/washington.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img src="../favicon.svg" alt="SR" width="32" height="32">
+      <span class="nav-logo-text">Skilled<span>Roofer</span></span>
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="../shingles.html">Shingles</a></li>
+      <li><a href="../metal-roofing.html">Metal Roofing</a></li>
+      <li><a href="../commercial.html">Commercial</a></li>
+      <li><a href="../tools.html">Tools</a></li>
+      <li><a href="../directory.html" class="active">Directory</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<div class="page-header">
+  <div class="page-header-content">
+    <div class="hero-badge">Contractor Directory</div>
+    <h1>Roofing Contractors in <span class="highlight">Washington</span></h1>
+    <p>Browse 2 verified roofing contractors in Washington with ratings, reviews, and contact information.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="directory-search">
+    <input type="text" id="contractorSearch" placeholder="Search by business name, city, or zip..." oninput="filterContractors()">
+  </div>
+  <div class="directory-count" id="contractorCount">Showing all <strong>2</strong> contractors in Washington</div>
+
+  <div class="contractor-grid" id="contractorGrid">
+    <div class="contractor-card animate-in" data-name="washington roofing services" data-city="arlington" data-zip="98223">
+      <div class="contractor-rating"><span class="contractor-stars">★★★★½</span><span class="contractor-rating-num">4.9</span><span class="contractor-reviews">(207 reviews)</span></div>
+      <h3>Washington Roofing Services</h3>
+      <div class="contractor-address">412 172nd St NE<br>Arlington, WA 98223</div>
+      <a href="tel:+12069445409" class="contractor-phone">📞 1 206-944-5409</a>
+      
+    </div>
+    <div class="contractor-card animate-in" data-name="diamond roofing &amp; construction" data-city="kirkland" data-zip="98033">
+      <div class="contractor-rating"><span class="contractor-stars">★★★★★</span><span class="contractor-rating-num">5</span><span class="contractor-reviews">(360 reviews)</span></div>
+      <h3>Diamond Roofing &amp; Construction</h3>
+      <div class="contractor-address">6421 Lake Washington Blvd NE #409<br>Kirkland, WA 98033</div>
+      <a href="tel:+12069736575" class="contractor-phone">📞 1 206-973-6575</a>
+      
+    </div>
+  </div>
+  <div class="no-results" id="noResults" style="display:none;">No contractors found matching your search.</div>
+</div>
+
+<div class="section" style="padding-top:0;">
+  <a href="../directory.html" class="btn btn-outline">← Back to All States</a>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Skilled<span>Roofer</span></h3>
+      <p>Expert roofing material reviews and buying guides for professionals and homeowners.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Guides</h4>
+      <ul>
+        <li><a href="../shingles.html">Best Shingles</a></li>
+        <li><a href="../metal-roofing.html">Metal Roofing</a></li>
+        <li><a href="../metal-vs-shingles.html">Metal vs Shingles</a></li>
+        <li><a href="../commercial.html">Commercial</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>More</h4>
+      <ul>
+        <li><a href="../underlayment.html">Underlayment</a></li>
+        <li><a href="../tools.html">Roofing Tools</a></li>
+        <li><a href="../directory.html">Contractor Directory</a></li>
+        <li><a href="../privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 SkilledRoofer.com — All rights reserved.</span>
+    <span>As an Amazon Associate, we earn from qualifying purchases.</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+  document.querySelectorAll('.animate-in').forEach((el, i) => {
+    gsap.fromTo(el,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' },
+        delay: i * 0.05
+      }
+    );
+  });
+</script>
+<script>
+const searchData = [{"name": "washington roofing services", "city": "arlington", "zip": "98223"}, {"name": "diamond roofing & construction", "city": "kirkland", "zip": "98033"}];
+function filterContractors() {
+  const q = document.getElementById('contractorSearch').value.toLowerCase().trim();
+  const grid = document.getElementById('contractorGrid');
+  const cards = grid.querySelectorAll('.contractor-card');
+  let shown = 0;
+  searchData.forEach((s, i) => {
+    const match = !q || s.name.includes(q) || s.city.includes(q) || s.zip.includes(q);
+    cards[i].style.display = match ? '' : 'none';
+    if (match) shown++;
+  });
+  document.getElementById('contractorCount').innerHTML =
+    'Showing <strong>' + shown + '</strong> contractor' + (shown !== 1 ? 's' : '') + ' in Washington';
+  document.getElementById('noResults').style.display = shown === 0 ? '' : 'none';
+}
+</script>
+
+</body>
+</html>
