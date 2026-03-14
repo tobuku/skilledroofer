@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page Not Found — SkilledRoofer</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script>
+    // Redirect old WordPress URLs to current static site equivalents
+    var redirects = {
+      // Old WP pages -> closest current page
+      '/contact/':          '/',
+      '/contact':           '/',
+      '/about/':            '/',
+      '/about':             '/',
+      '/blog/':             '/',
+      '/blog':              '/',
+      '/gallery/':          '/',
+      '/gallery':           '/',
+      '/services/':         '/directory.html',
+      '/services':          '/directory.html',
+      '/index.html':        '/',
+
+      // Old blog posts -> closest current guide
+      '/mastering-diy-roof-inspection-tools-tips-and-techniques/':  '/tools.html',
+      '/mastering-diy-roof-inspection-tools-tips-and-techniques':   '/tools.html',
+      '/preventing-roof-leaks-expert-tips-for-a-watertight-roof/':  '/underlayment.html',
+      '/preventing-roof-leaks-expert-tips-for-a-watertight-roof':   '/underlayment.html',
+      '/debunking-common-roofing-myths-a-comprehensive-guide-to-roof-health/': '/',
+      '/debunking-common-roofing-myths-a-comprehensive-guide-to-roof-health':  '/',
+
+      // Old WP category & tag pages
+      '/category/green-roofing/':         '/metal-roofing.html',
+      '/category/green-roofing':          '/metal-roofing.html',
+      '/category/roof-inspection-tips/':  '/tools.html',
+      '/category/roof-inspection-tips':   '/tools.html',
+      '/category/roofing/':               '/',
+      '/category/roofing':                '/',
+      '/tag/regional-roof-considerations/': '/directory.html',
+      '/tag/regional-roof-considerations':  '/directory.html',
+      '/tag/roofing-best-practices/':     '/',
+      '/tag/roofing-best-practices':      '/',
+    };
+
+    var path = window.location.pathname;
+
+    if (redirects[path]) {
+      window.location.replace(redirects[path]);
+    } else if (path.endsWith('/') && redirects[path.slice(0, -1)]) {
+      window.location.replace(redirects[path.slice(0, -1)]);
+    } else if (path.indexOf('/wp-content/') !== -1) {
+      window.location.replace('/');
+    }
+  </script>
+</head>
+<body>
+  <main style="max-width:600px;margin:4rem auto;padding:0 1.5rem;font-family:sans-serif;text-align:center">
+    <h1 style="font-size:4rem;margin:0">404</h1>
+    <p style="font-size:1.2rem;margin:1rem 0 2rem">Page not found.</p>
+    <a href="/" style="display:inline-block;padding:0.75rem 1.5rem;background:#1a1a1a;color:#fff;text-decoration:none;border-radius:6px">Go Home</a>
+  </main>
+</body>
+</html>
