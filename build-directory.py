@@ -256,9 +256,9 @@ def build_hub(contractors, total):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find Roofing Contractors Near You | SkilledRoofer.com</title>
-  <meta name="description" content="Browse {total:,} verified roofing contractors across all 50 states. Find trusted roofers near you with ratings, reviews, and contact info.">
-  <meta property="og:title" content="Find Roofing Contractors Near You | SkilledRoofer.com">
+  <title>Find Roofing Contractors Near You ({total:,} Listed)</title>
+  <meta name="description" content="Browse {total:,} verified roofing contractors across all 50 states. Ratings, reviews, phone numbers, and websites for local roofers near you.">
+  <meta property="og:title" content="Find Roofing Contractors Near You ({total:,} Listed)">
   <meta property="og:description" content="Browse {total:,} verified roofing contractors across all 50 states.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://skilledroofer.com/directory.html">
@@ -383,10 +383,10 @@ def build_state_page(state_name, items):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roofing Contractors in {e(state_name)} | SkilledRoofer.com</title>
-  <meta name="description" content="Find {count} trusted roofing contractors in {e(state_name)}. Browse ratings, reviews, phone numbers, and websites for local roofers.">
-  <meta property="og:title" content="Roofing Contractors in {e(state_name)} | SkilledRoofer.com">
-  <meta property="og:description" content="Find {count} trusted roofing contractors in {e(state_name)}.">
+  <title>{count} Roofing Contractors in {e(state_name)} (2026)</title>
+  <meta name="description" content="Compare {count} roofing contractors in {e(state_name)}. Ratings, reviews, phone numbers, and websites. Find a trusted local roofer near you.">
+  <meta property="og:title" content="{count} Roofing Contractors in {e(state_name)} (2026)">
+  <meta property="og:description" content="Compare {count} roofing contractors in {e(state_name)}. Ratings, reviews, and contact info.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://skilledroofer.com/directory/{slug(state_name)}.html">
   <link rel="canonical" href="https://skilledroofer.com/directory/{slug(state_name)}.html">
